@@ -10,6 +10,8 @@ Please include the following line in your hosts file
 
 `127.0.0.1 test.rocketplantech.com`
 
+See How to edit your hosts file on Windows [here](https://www.groovypost.com/howto/edit-hosts-file-windows-10/)
+
 ### Mac
 Please do the following steps
 
@@ -34,6 +36,11 @@ This will install the nodule modules
 # Dev Build
 
 `yarn run start`
+
+The Webpack build has a lot of outputs, if this is not intterupted then allow it to completely build for the first time... consecutive builds on "save" are faster after the first build.
+
+In the event you run into any error with the build failing
+for this project you can downgrade you `node to 14 or 16`
 
 # Staging Build
 
