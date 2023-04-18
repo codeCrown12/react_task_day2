@@ -40,7 +40,7 @@ This will install the nodule modules
 The Webpack build has a lot of outputs, if this is not intterupted then allow it to completely build for the first time... consecutive builds on "save" are faster after the first build.
 
 In the event you run into any error with the build failing
-for this project you can downgrade you `node to 14 or 16`
+for this project you can downgrade your `node version to 14 or 16`
 
 # Staging Build
 
