@@ -1,0 +1,9 @@
+.contractFormContent {
+    background-color: white;
+}
+.titleContainer {
+    position: relative;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+}

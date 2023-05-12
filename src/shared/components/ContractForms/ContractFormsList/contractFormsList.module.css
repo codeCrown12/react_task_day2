@@ -1,0 +1,42 @@
+.contractFormsListContainer {
+    min-height: 700px;
+}
+.contractFormsListWrapper {
+    font-family: IBM Plex Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 16px;
+    color: #5b476b;
+    border-color: #e8e7ed;
+    background-color: #ffffff;
+    margin-top: 24px;
+    margin-bottom: 0;
+}
+
+.contractFormsListWrapper thead th:first-child,
+.contractFormsListWrapper tbody td:first-child {
+    padding-left: 72px;
+}
+.contractFormsListWrapper thead th:last-child,
+.contractFormsListWrapper tbody td:last-child {
+    padding-right: 72px;
+}
+.contractFormsListWrapper thead th {
+    text-transform: uppercase;
+    font-weight: 600;
+    color: #777185;
+    padding-bottom: 1.2em;
+    border-bottom-color: #e8e7ed !important;
+}
+.contractFormsListWrapper tbody tr:hover {
+    background-color: #f4e5ff;
+    transition: 0.2s ease-in-out;
+    cursor: pointer;
+}
+.contractFormsListWrapper tbody td {
+    vertical-align: middle;
+}
+.contractFormsListWrapper p {
+    margin-bottom: 0;
+}
