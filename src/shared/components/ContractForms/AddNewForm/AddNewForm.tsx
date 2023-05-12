@@ -6,6 +6,7 @@ import React, { memo } from 'react';
 import { areEqual } from 'Utils/equalityChecks';
 import { Modal } from 'Components/Modal';
 import { Api } from 'Utils/api';
+import { useSelector, RootStateOrAny } from 'react-redux';
 
 import classes from './addNewForm.module.css';
 
@@ -17,9 +18,24 @@ const AddNewForm = () => {
   const [name, setName] = React.useState('');
   const [template, setTemplate] = React.useState('');
   const [hasSignature, setHasSignature] = React.useState(false);
+  const userData = useSelector((state: RootStateOrAny) => state.user.user);
 
-  interface FormDataType {name: string, template: string, has_signature: boolean}
-  const requestBody: FormDataType = { name: '', template: '', has_signature: false };
+  interface FormDataType {
+    name: string,
+    template: string,
+    has_signature: boolean,
+    status: string,
+    company_id: number,
+    replacement_tags: string
+  }
+  const requestBody: FormDataType = { 
+    name: '', 
+    template: '', 
+    has_signature: false,
+    status: 'active',
+    company_id: userData.companies[0].id,
+    replacement_tags: 'testing'
+  };
 
   const inputChangeHandler = (setFunction: any, event: any) => {
     setFunction(event.target.value);

@@ -10,28 +10,27 @@ interface Props {
 const ContractFormsList = ({
   templates,
 }: Props) => {
-  const rows = templates.map((template) => (
-    <TableRow>
+  const rows = templates.map(template => 
+    <TableRow key={template.company_id}>
       <TableColumn>
         <div>
-          <span>{template}</span>
-          <p>Testing</p>
+          <p>{template.name}</p>
         </div>
       </TableColumn>
 
       <TableColumn>
         <div>
-          <p>Testing</p>
+          <p>{template.created_at}</p>
         </div>
       </TableColumn>
 
       <TableColumn>
         <div>
-          <p>Testing</p>
+          <button>Delete</button>
         </div>
       </TableColumn>
     </TableRow>
-  ));
+  );
 
   return (
     <>
