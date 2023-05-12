@@ -70,10 +70,10 @@ const AddNewForm = () => {
             </div>
             <div className="row mt-4">
               <div className="col-12">
-                <input onChange={(e) => inputChangeHandler(setTemplate, e)} type="text" className="form-control" placeholder="template" aria-label="Last name" />
+                <textarea onChange={(e) => inputChangeHandler(setTemplate, e)} rows={5} className="form-control" placeholder="template" aria-label="Last name" />
               </div>
             </div>
-            <div className="submitBtnContainer">
+            <div className="submitBtnContainer mt-5">
               <div><button type="submit" className={`${classes.addFormButton}`}>Submit</button></div>
             </div>
           </form>
