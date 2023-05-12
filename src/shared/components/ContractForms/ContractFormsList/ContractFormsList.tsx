@@ -1,6 +1,8 @@
+/* eslint-disable react/jsx-wrap-multilines */
 import React, { memo } from 'react';
 import { areEqual } from 'Utils/equalityChecks';
 import { Table, TableBody, TableColumn, TableHeader, TableRow, Th } from 'Components/Table';
+import { DeleteForm } from '../DeleteForm';
 import classes from './contractFormsList.module.css';
 
 interface Props {
@@ -11,7 +13,7 @@ const ContractFormsList = ({
   templates,
 }: Props) => {
   const rows = templates.map(template => 
-    <TableRow key={template.company_id}>
+    <TableRow key={template.id}>
       <TableColumn>
         <div>
           <p>{template.name}</p>
@@ -26,7 +28,7 @@ const ContractFormsList = ({
 
       <TableColumn>
         <div>
-          <button>Delete</button>
+          <DeleteForm contractId={template.id} />
         </div>
       </TableColumn>
     </TableRow>
